@@ -32,6 +32,28 @@ Do all your `git add` and `git commit` stuff with an appropriate commit message 
 
 TBD whether to use pull requests or not for review. Anything pushed to the `main` branch on GitHub will automatically build on Netlify. You can either carefully handle editing and polishing presentation in a branch of the site running locally or else play whack-a-mole with pushing to `main` and rebuilding on Netlify for each edit. Either will work fine, just depends on how patient you are and what your preferred editing approach is.
 
+To build a version of the site for publishing, run the `build` script. This will output the finished website build to the `web` directory.
+
+In Netlify, under the site settings for **Build & Deploy**, configure the following settings.
+
+Repository:
+
+```
+https://github.com/officinadata/website
+```
+
+Build command:
+
+```
+npm run build
+```
+
+Publish directory:
+
+```
+web
+```
+
 ## Templates and Site Metadata
 
 Coming soon.
