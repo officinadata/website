@@ -18,9 +18,13 @@ npm start
 
 ## Editing Content
 
-You don’t need a copy of the website running locally to contribute. To publish a new article, make sure you have an author profile present in the `authors` content directory.
+You don’t need a copy of the website running locally to contribute. You could do all the editing and commits via the GitHub web interface or you could do your work in a local copy of the Git repo but without the JS app running. Whatever works best for your writing and editing process.
 
-Create a new Markdown file in the `articles` directory. Give it a `title`, `summary`, link to your `author` ID and go from there. Add any required images and media files to the `assets` directory before linking to them in your text.
+Everything happens inside the `content` directory which includes all the articles, author profiles, media assets, standard content pages and HTML templates.
+
+To publish a new article, make sure you have an author profile present in the `authors` content directory.
+
+Create a new Markdown file in the `articles` directory. Give it a `title`, `summary`, link to your `author` ID and go from there. Add any required images and media files to the `images` and `assets` directories before linking to them in your text.
 
 Do all your `git add` and `git commit` stuff with an appropriate commit message describing your changes. Once you’re happy with the state of your work, it’s time to publish.
 
