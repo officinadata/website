@@ -1,0 +1,10 @@
+web/
+logs/
+node_modules/
+.DS_Store
+.cache
+*.log
+npm-debug.log*
+.npm
+*.tgz
+*.zip

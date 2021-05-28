@@ -1,0 +1,17 @@
+{
+  "name": "officinadata",
+  "private": true,
+  "description": "Website and publishing pipeline for officinadata",
+  "main": "index.js",
+  "scripts": {
+    "build": "eleventy",
+    "start": "eleventy --serve"
+  },
+  "keywords": [],
+  "author": "Mark Rickerby <me@maetl.net> (https://maetl.net/)",
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.12.1",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^3.1.0"
+  }
+}
