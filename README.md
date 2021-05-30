@@ -16,6 +16,12 @@ npm install
 npm start
 ```
 
+To start the development server in debug mode, pass the ENV variable:
+
+```
+DEBUG=Eleventy* npm start
+```
+
 ## Editing Content
 
 You don’t need a copy of the website running locally to contribute. You could do all the editing and commits via the GitHub web interface or you could do your work in a local copy of the Git repo but without the JS app running. Whatever works best for your writing and editing process.

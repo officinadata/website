@@ -1,0 +1,29 @@
+---
+permalink: feed.xml
+eleventyExcludeFromCollections: true
+feed:
+  title: Darescience
+  subtitle: Subtitle of the feed
+  url: https://darescience.net
+---
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="/assets/feed.xsl" media="screen"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>{{ feed.title }}</title>
+  <subtitle>{{ feed.subtitle }}</subtitle>
+  <link href="{{ feed.url }}/{{ permalink }}" rel="self"/>
+  <link href="{{ feed.url }}"/>
+  <updated>{{ collections.articles | getNewestCollectionItemDate | atomDateFormat }}</updated>
+  <id>{{ feed.url }}</id>
+{% for article in collections.articles %}
+  {% assign absoluteArticleUrl = article.url | url | absoluteUrl(feed.url) %}
+  <entry>
+    <title>{{ article.data.title }}</title>
+    <link href="{{ absoluteArticleUrl }}"/>
+    <id>{{ absoluteArticleUrl }}</id>
+    <updated>{{ article.date | atomDateFormat }}</updated>
+    <summary>Text line</summary>
+    <content type="html">{{ article.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
+  </entry>
+{% endfor %}
+</feed>

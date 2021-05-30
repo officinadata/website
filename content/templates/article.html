@@ -1,10 +1,6 @@
 <html>
 <head>
-  <title>DareScience.net Template Variable Here</title>
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;700&family=Noto+Serif+TC:wght@400;600&display=swap" rel="stylesheet">
-  <link href="/assets/forma.css" rel="stylesheet">
-  <link href="/assets/syntax.css" rel="stylesheet">
+  {% include htdoc-header %}
 </head>
 <body>
   <header class="main-header">
@@ -26,8 +22,23 @@
     </div>
   </article>
   <aside class="magazine">
+    {% assign previousPost = collections.articles | getPreviousCollectionItem: page %}
+    {% assign nextPost = collections.articles | getNextCollectionItem: page %}
     <div class="magazine-next">
+      {% if nextPost %}
       <h2>Next Article</h2>
+      <div class="magazine-thumb">
+        <h3><a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a></h3>
+        <p>{{ nextPost.data.summary }}</p>
+      </div>
+      {% endif %}
+      {% if previousPost %}
+      <h2>Previous Article</h2>
+      <div class="magazine-thumb">
+        <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a>
+        <p>{{ previousPost.data.summary }}</p>
+      </div>
+      {% endif %}
     </div>
     <div class="magazine-related">
       <h2>Related Articles</h2>
