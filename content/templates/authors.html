@@ -1,10 +1,6 @@
 <html>
 <head>
-  <title>DareScience.net Template Variable Here</title>
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;700&family=Noto+Serif+TC:wght@400;600&display=swap" rel="stylesheet">
-  <link href="/assets/forma.css" rel="stylesheet">
-  <link href="/assets/syntax.css" rel="stylesheet">
+  {% include document-head %}
 </head>
 <body>
   <header class="main-header">
@@ -17,23 +13,21 @@
       </ul>
     </nav>
   </header>
-  <article class="article">
-    <div class="article-header">
-      <h1>{{ title }}</h1>
-      <h2>{{ content }}<h2>
-    </div>
-    <div class="article-body">
-      {% for author in collections.authors %}
-        <div class="author" id="{{ author.data.id }}">
-          <h2>{{ author.data.name }}</h2>
-          <p><a href="{{ author.website }}">{{ author.data.website }}</a></p>
+  <main class="authors">
+    {% for author in collections.authors %}
+      <div class="author" id="{{ author.data.id }}">
+        <div class="author-profile">
+          <a href="{{ author.data.website }}"><h2>{{ author.data.name }}</h2> <span>{{ author.data.website }}</span></a>
           <div class="author-bio">
-            {{ author.content }}
+            {{ author.templateContent }}
           </div>
         </div>
-      {% endfor %}
-    </div>
-  </article>
+        <figure class="author-picture">
+          <strong>{{ author.data.placeholder_glyph }}</strong>
+        </figure>
+      </div>
+    {% endfor %}
+  </main>
   <footer class="main-footer">
     <h3>Data science connected</h3>
     <p class="main-copyright">{{ footer.text }}</p>

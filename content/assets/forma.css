@@ -6,8 +6,8 @@
   --color-mid: #EAE6AE;
   --color-highlight: #FEF020;
   --color-spot: #7D92D7;
-  --font-text: '"Noto Serif TC", "Noto Serif", Georgia, serif';
-  --font-display: '"Arial Rounded MT Bold", Arial, sans-serif';
+  --font-text: "Noto Serif TC", "Noto Serif", Georgia, serif;
+  --font-display: "Arial Rounded MT Bold", Arial, sans-serif;
 }
 
 * {
@@ -34,7 +34,6 @@ h6 {
 
 h1, h2 {
   font-size: 2em;
-  color: var(--color-dark);
 }
 
 pre {
@@ -47,6 +46,11 @@ pre {
 
 img {
   width: 100%;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
 }
 
 .article {
@@ -77,4 +81,76 @@ img {
 
 .article-body {
     grid-column: 2 / 3;
+}
+
+.author {
+  display: flex;
+  justify-content: space-between;
+  height: 50vw;
+}
+
+.author-profile,
+.author-picture {
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.author-profile {
+  color: var(--color-dark);
+  background-color: var(--color-highlight);
+}
+
+.author-profile a,
+.author-bio {
+  width: 60%;
+  text-align: right;
+}
+
+.author-profile a {
+  display: inline-block;
+  text-decoration: none;
+  text-align: right;
+  color: var(--color-dark);
+}
+
+.author-profile h2 {
+  margin-bottom: 0;
+}
+
+.author-profile a span {
+  font-size: 0.8em;
+  border-bottom: 1px solid var(--color-dark);
+}
+
+.author-profile a:hover span {
+  border-bottom: 1px solid var(--color-spot);
+}
+
+.author-profile a:hover {
+  color: var(--color-black);
+}
+
+.author-bio {
+  font-weight: bold;
+}
+
+.author:nth-of-type(2n) .author-profile {
+  order: 2;
+}
+
+.author-picture {
+  background-color: var(--color-spot);
+}
+
+.author:nth-of-type(2n) .author-picture {
+  order: 1;
+}
+
+.author-picture strong {
+  display: block;
+  font-size: 30vh;
+  color: var(--color-highlight);
 }
