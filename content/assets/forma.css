@@ -137,6 +137,10 @@ figure {
   font-weight: bold;
 }
 
+.author:nth-of-type(2n) .author-picture {
+  order: 1;
+}
+
 .author:nth-of-type(2n) .author-profile {
   order: 2;
 }
@@ -145,12 +149,23 @@ figure {
   background-color: var(--color-spot);
 }
 
-.author:nth-of-type(2n) .author-picture {
-  order: 1;
-}
-
 .author-picture strong {
   display: block;
   font-size: 30vh;
   color: var(--color-highlight);
+}
+
+@media screen and (max-width: 959px) {
+  .author-profile {
+    border-top: 2em solid var(--color-spot);
+    width: 70%;
+  }
+
+  .author-picture {
+    width: 30vw;
+  }
+
+  .author-picture strong {
+    font-size: 15vh;
+  }
 }
