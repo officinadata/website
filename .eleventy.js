@@ -10,7 +10,7 @@ module.exports = function(eleventyConfig) {
 
   // Static media directories get directly copied to output
   eleventyConfig.addPassthroughCopy("content/images");
-  eleventyConfig.addPassthroughCopy("content/assets");
+  eleventyConfig.addPassthroughCopy("assets");
 
   // Treat Eleventy content like a database and collect byline for an article
   eleventyConfig.addLiquidFilter("withAuthors", (bylines, authors) => {
@@ -67,8 +67,8 @@ module.exports = function(eleventyConfig) {
     dir: {
       input: "content",
       output: "web",
-      includes: "templates/partials",
-      layouts: "templates",
+      includes: "../templates/partials",
+      layouts: "../templates",
       data: "settings"
     },
     htmlTemplateEngine: "liquid"
