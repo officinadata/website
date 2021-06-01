@@ -4,25 +4,31 @@ eleventyExcludeFromCollections: true
 feed:
   title: Darescience
   subtitle: Subtitle of the feed
-  url: https://darescience.net
+  url: https://darescience.net/
 ---
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="/assets/feed.xsl" media="screen"?>
+<?xml-stylesheet href="/assets/feed.xsl?cachebuster" type="text/xsl"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>{{ feed.title }}</title>
   <subtitle>{{ feed.subtitle }}</subtitle>
-  <link href="{{ feed.url }}/{{ permalink }}" rel="self"/>
+  <link href="{{ feed.url }}{{ permalink }}" rel="self"/>
   <link href="{{ feed.url }}"/>
   <updated>{{ collections.articles | getNewestCollectionItemDate | atomDateFormat }}</updated>
   <id>{{ feed.url }}</id>
   {% for article in collections.articles %}
   {% capture publicUrl %}{{ feed.url}}{{ article.url }}{% endcapture %}
+  {% assign authors = article.data.byline | withAuthors: collections.authors %}
   <entry>
     <title>{{ article.data.title }}</title>
     <link href="{{ publicUrl }}"/>
     <id>{{ publicUrl }}</id>
     <updated>{{ article.date | atomDateFormat }}</updated>
     <summary>{{ article.data.summary }}</summary>
+    {% for name in authors %}
+    <author>
+      <name>{{ name }}</name>
+    </author>
+    {% endfor %}
   </entry>
   {% endfor %}
 </feed>
