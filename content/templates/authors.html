@@ -3,16 +3,7 @@
   {% include document-head %}
 </head>
 <body>
-  <header class="main-header">
-    <h1><a href="/">DScience</a></h1>
-    <nav class="main-nav">
-      <ul>
-        {% for item in main-nav.items %}
-          <li><a href="{{ item.path }}">{{ item.label }}</a></li>
-        {% endfor %}
-      </ul>
-    </nav>
-  </header>
+  {% include main-header %}
   <main class="authors">
     {% for author in collections.authors %}
       <div class="author" id="{{ author.data.id }}">

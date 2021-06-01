@@ -53,6 +53,40 @@ figure {
   padding: 0;
 }
 
+.main-header {
+  background-color: var(--color-dark);
+  color: var(--color-highlight);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-display);
+}
+
+.main-header a {
+  text-decoration: none;
+  color: var(--color-highlight);
+  font-size: 1.5em;
+}
+
+.main-header .main-logo {
+  margin-left: 2em;
+}
+
+.main-header a:hover {
+  color: var(--color-light);
+}
+
+.main-header .main-nav ul {
+  list-style: none;
+}
+
+.main-header .main-nav li {
+  display: inline-block;
+  margin-right: 2em;
+}
+
+
+
 .article {
   width: 100%;
   display: grid;

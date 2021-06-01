@@ -1,21 +1,9 @@
 <html>
 <head>
-  <title>DareScience.net Template Variable Here</title>
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;700&family=Noto+Serif+TC:wght@400;600&display=swap" rel="stylesheet">
-  <link href="/assets/forma.css" rel="stylesheet">
+  {% include document-head %}
 </head>
 <body>
-  <header class="main-header">
-    <h1><a href="/">DScience Page</a></h1>
-    <nav class="main-nav">
-      <ul>
-        {% for item in main-nav.items %}
-          <li><a href="{{ item.path }}">{{ item.label }}</a></li>
-        {% endfor %}
-      </ul>
-    </nav>
-  </header>
+  {% include main-header %}
   <div class="main-body">
     <article class="page">
       <div class="page-header">
