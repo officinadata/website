@@ -3,16 +3,7 @@
   {% include document-head %}
 </head>
 <body>
-  <header class="main-header">
-    <h1><a href="/">DScience</a></h1>
-    <nav class="main-nav">
-      <ul>
-        {% for item in main-nav.items %}
-          <li><a href="{{ item.path }}">{{ item.label }}</a></li>
-        {% endfor %}
-      </ul>
-    </nav>
-  </header>
+  {% include main-header %}
   <article class="article">
     <div class="article-header">
       <h1>{{ title }}</h1>
@@ -44,9 +35,6 @@
       <h2>Related Articles</h2>
     </div>
   </aside>
-  <footer class="main-footer">
-    <h3>Data science connected</h3>
-    <p class="main-copyright">{{ footer.text }}</p>
-  </footer>
+  {% include main-footer %}
 </body>
 </html>
