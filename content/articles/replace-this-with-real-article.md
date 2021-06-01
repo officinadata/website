@@ -5,11 +5,47 @@ summary: A short summary of the article’s main point or argument
 layout: article
 ---
 
+# Demo Content
+
 A tool is an object that can extend an individual's ability to modify features of the surrounding environment. Although many animals use simple tools, only human beings, whose use of stone tools dates back hundreds of millennia, have been observed using tools to make other tools.
 
 ## Metaphors
 
 A telephone is a communication tool that interfaces between two people engaged in conversation at one level. It also interfaces between each user and the communication network at another level. It is in the domain of media and communications technology that a counter-intuitive aspect of our relationships with our tools first began to gain popular recognition. Marshall McLuhan famously said "We shape our tools. And then our tools shape us." McLuhan was referring to the fact that our social practices co-evolve with our use of new tools and the refinements we make to existing tools.
+
+### Third Level Heading
+
+Blockquotes allow embedding content from other websites.
+
+> We recognize that we gather as part of a professional field with a colonial history and colonial present, and we aim to lessen the ongoing harms by responsibly speaking about the harmful impact of settler colonialism.
+> As an organization, we recognize this history and uplift the sovereignty of Indigenous people, data, and territory. We commit to dismantling all ongoing settler-colonial practices and their material implications on our digital worlds.
+
+#### Fourth Level Heading
+
+A key feature for content in Eleventy is "collections". If you come from the WordPress world like I do, you can think of these similair to how adding tags creates sets of content. In fact, Eleventy uses the same convention of tags as one way to create a collection.
+
+Tags can be added in Frontmatter, either as a single string or as an array.
+
+But the slickest way is to create a directory data file. The directory data file needs to be named the same as the directory, and can be either JSON or JavaScript. It can hold any values that you would otherwise have to repeat in Frontmatter for all related content.
+
+So in this example located in our posts directory, we create posts.json and define the tags as well as the layout:
+
+```js
+{
+  layout: "article",
+  tags: "articles"
+}
+```
+
+Now, we can access the `articles` collection within any of our templates.
+
+##### Fairness & Equality
+
+AI development should not exploit, discriminate or bias against any group of people.
+
+###### Fairness & Equality
+
+AI development should not exploit, discriminate or bias against any group of people.
 
 ## Climate Grid Example
 

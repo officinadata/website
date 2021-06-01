@@ -26,13 +26,13 @@
       {% if previousPost %}
       <h2>Previous Article</h2>
       <div class="magazine-thumb">
-        <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a>
+        <h3><a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a></h3>
         <p>{{ previousPost.data.summary }}</p>
       </div>
       {% endif %}
     </div>
     <div class="magazine-related">
-      <h2>Related Articles</h2>
+      <!-- <h2>Related Articles</h2> -->
     </div>
   </aside>
   {% include main-footer %}

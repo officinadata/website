@@ -11,9 +11,13 @@ A tool is an object that can extend an individual's ability to modify features o
 
 A telephone is a communication tool that interfaces between two people engaged in conversation at one level. It also interfaces between each user and the communication network at another level. It is in the domain of media and communications technology that a counter-intuitive aspect of our relationships with our tools first began to gain popular recognition. Marshall McLuhan famously said "We shape our tools. And then our tools shape us." McLuhan was referring to the fact that our social practices co-evolve with our use of new tools and the refinements we make to existing tools.
 
-## Climate Grid Example
+##### Climate Grid Example
 
-Note that if the ClimGrid data structure has 3 dimensions (time x longitude x latitude) the `mapclimgrid` function makes a time-average (i.e. climatological mean). Right now, there are a growing list of hardcoded regions (see help section of `mapclimgrid` function) and the default `auto` which use the maximum and minimum of the lat-long coordinates inside the `ClimGrid` structure. The user can also provide a polygon(s) and the `mapclimgrid` function will clip the grid points outside the specified polygon. Another option is to provide a mask (with dimensions identical to the spatial dimension of the `ClimGrid` data) which contains `NaN` and `1.0` and the data inside the `ClimGrid` struct will be clipped with the mask. Other regions will be added in the future, as well as the option to send a custom region defined by a lat-lon box.
+Note that if the ClimGrid data structure has 3 dimensions (time x longitude x latitude) the `mapclimgrid` function makes a time-average (i.e. climatological mean). Right now, there are a growing list of hardcoded regions (see help section of `mapclimgrid` function) and the default `auto` which use the maximum and minimum of the lat-long coordinates inside the `ClimGrid` structure.
+
+![example map](/images/example-map.png)
+
+The user can also provide a polygon(s) and the `mapclimgrid` function will clip the grid points outside the specified polygon. Another option is to provide a mask (with dimensions identical to the spatial dimension of the `ClimGrid` data) which contains `NaN` and `1.0` and the data inside the `ClimGrid` struct will be clipped with the mask. Other regions will be added in the future, as well as the option to send a custom region defined by a lat-lon box.
 
 ```julia
 struct ClimGrid
@@ -43,5 +47,3 @@ end
 ```
 
 Embedding an image. More than 20 climate indices are available in the package, such as the annual number of tropical nights, annual maximum and minimum, etc. Climate indices can easily be developed by following the source code or looking at the available metadata inside a `ClimGrid`.
-
-![example map](/images/example-map.png)

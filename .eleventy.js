@@ -13,9 +13,9 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("content/assets");
 
   // Manually add articles collection which generates one URL per document
-  eleventyConfig.addCollection("articles", (collection) => {
-    return collection.getFilteredByGlob("content/articles/*.md");
-  });
+  // eleventyConfig.addCollection("articles", (collection) => {
+  //   return collection.getFilteredByGlob("content/articles/*.md");
+  // });
 
   // Manually add authors collection which aggregates all documents to one URL
   eleventyConfig.addCollection("authors", (collection) => {
