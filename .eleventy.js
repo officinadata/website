@@ -12,14 +12,21 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("content/images");
   eleventyConfig.addPassthroughCopy("content/assets");
 
-  // Manually add articles collection which generates one URL per document
-  // eleventyConfig.addCollection("articles", (collection) => {
-  //   return collection.getFilteredByGlob("content/articles/*.md");
-  // });
+  // Treat Eleventy content like a database and collect byline for an article
+  eleventyConfig.addLiquidFilter("withAuthors", (bylines, authors) => {
+    const authorsInByline = [];
 
-  // Manually add authors collection which aggregates all documents to one URL
-  eleventyConfig.addCollection("authors", (collection) => {
-    return collection.getFilteredByGlob("content/authors/*.md");
+    if (bylines) {
+      const bylineList = Array.isArray(bylines) ? bylines : [bylines];
+
+      for (authorId of bylineList) {
+        const author = authors.find(candidate => candidate.data.id == authorId);
+
+        if (author) authorsInByline.push(author.data.name);
+      }
+    }
+
+    return authorsInByline;
   });
 
   // In case Markdown is needed from other places than .md files

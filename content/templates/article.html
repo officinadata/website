@@ -6,7 +6,13 @@
   {% include main-header %}
   <article class="article">
     <div class="article-header">
-      <h1>{{ title }}</h1>
+      <h1 class="article-title">{{ title }}</h1>
+      {% assign authors = byline | withAuthors: collections.authors %}
+      <ul class="article-byline">
+      {% for name in authors %}
+        <li>{{ name }}</li>
+      {% endfor %}
+      </ul>
     </div>
     <div class="article-body">
       {{ content | safe }}

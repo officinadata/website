@@ -163,6 +163,21 @@ li {
   background-color: var(--color-highlight);
 }
 
+.article-byline {
+  color: var(--color-dark);
+  list-style: none;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.article-byline li {
+  display: inline-block;
+}
+
+.article-byline li:not(:last-of-type)::after {
+  content: ", ";
+}
+
 .article-body {
     grid-column: 2 / 3;
 }
