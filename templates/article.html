@@ -28,13 +28,14 @@
         <h3><a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a></h3>
         <p>{{ nextPost.data.summary }}</p>
       </div>
-      {% endif %}
+      {% else %}
       {% if previousPost %}
       <h2>Previous Article</h2>
       <div class="magazine-thumb">
         <h3><a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a></h3>
         <p>{{ previousPost.data.summary }}</p>
       </div>
+      {% endif %}
       {% endif %}
     </div>
     <div class="magazine-related">
