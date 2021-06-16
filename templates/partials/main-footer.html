@@ -3,8 +3,15 @@
     <nav class="main-nav">
       <ul>
         <li><a href="/articles/">Articles</a></li>
-        <li><a href="/authors/">Authors</a></li>
         <li><a href="/feed.xml">Feed</a></li>
+      </ul>
+    </nav>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="/authors/">Authors</a></li>
+        {% for author in collections.authors %}
+        <li class="secondary"><a href="/authors#{{ author.data.id }}">{{ author.data.name }}</a></li>
+        {% endfor %}
       </ul>
     </nav>
     <div class="main-contents">

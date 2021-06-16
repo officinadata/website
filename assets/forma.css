@@ -112,6 +112,10 @@ li {
   padding-bottom: 1em;
 }
 
+li.secondary {
+  font-size: 0.8em;
+}
+
 @media screen and (max-width: 750px) {
   .main-header {
     flex-direction: column;
