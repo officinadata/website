@@ -1,5 +1,5 @@
 ---
-title: Authors
+title: People
 layout: authors
 ---
 
