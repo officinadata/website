@@ -13,6 +13,7 @@
         <li>{{ name }}</li>
       {% endfor %}
       </ul>
+      <strong class="article-date">{{ date | date: "%b %d, %Y" }}</strong>
     </div>
     <div class="article-body">
       {{ content | safe }}

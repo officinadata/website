@@ -112,6 +112,10 @@ li {
   padding-bottom: 1em;
 }
 
+li.secondary {
+  font-size: 0.8em;
+}
+
 @media screen and (max-width: 750px) {
   .main-header {
     flex-direction: column;
@@ -338,6 +342,11 @@ li {
   padding: 16vh 3em;
 }
 
+.articles-collection .article-summary {
+  font-size: 1.2em;
+  margin: 0.5em 0;
+}
+
 .article-title a {
   color: var(--color-dark);
   text-decoration: none;
@@ -359,10 +368,15 @@ li {
   color: var(--color-white);
 }
 
-.articles-collection article:nth-of-type(2n) .article-summary {
+.articles-collection article:nth-of-type(2n) .article-summary,
+.articles-collection article:nth-of-type(2n) .article-byline {
   color: var(--color-highlight);
 }
 
+.articles-collection article:nth-of-type(2n) .article-date {
+  color: var(--color-dark);
+  background-color: var(--color-highlight);
+}
 
 .articles-collection article:last-of-type {
   background-color: var(--color-highlight);
@@ -376,22 +390,73 @@ li {
   color: var(--color-spot);
 }
 
-.articles-collection article:last-of-type .article-summary {
+.articles-collection article:last-of-type .article-summary,
+.articles-collection article:last-of-type .article-byline {
   color: var(--color-dark);
 }
 
+.articles-collection article:last-of-type .article-date {
+  color: var(--color-highlight);
+  background-color: var(--color-dark);
+}
+
 .articles-collection .article-title {
-  margin: 0;
+  margin: 0.5em 0 0 0;
+}
+
+.article-date {
+  color: var(--color-dark);
 }
 
 .articles-collection .article-summary {
+  max-width: 420px;
   font-weight: bold;
   color: var(--color-dark);
 }
 
+.articles-collection .article-date {
+  display: inline-block;
+  padding: 1px 6px;
+  border-radius: 3px;
+  font-size: 0.9em;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: var(--color-light);
+  background-color: var(--color-dark);
+}
+
+.articles-home {
+  font-size: 1.2em;
+}
+
+.home-content {
+  background-color: var(--color-mid);
+  display: flex;
+  justify-content: space-between;
+}
+
+.home-text {
+  font-size: 1.2em;
+  padding: 3em;
+}
+
+.home-aside {
+  width: 42em;
+  background-color: var(--color-spot);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-aside .home-glyph {
+  display: block;
+  font-size: 30vh;
+  color: var(--color-highlight);
+}
+
 .magazine {
   display: grid;
-  grid-template-columns: auto 42em auto;;
+  grid-template-columns: auto 42em auto;
 }
 
 .magazine-footer {

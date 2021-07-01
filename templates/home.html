@@ -1,0 +1,37 @@
+<html>
+<head>
+  {% include document-head %}
+</head>
+<body>
+  {% include main-header %}
+  <div class="main-body">
+    <div class="articles-collection articles-home">
+    {% assign article = collections.articles first %}
+    <article class="article-listing" id="{{ article.data.id }}">
+      <strong class="article-date">{{ article.date | date: "%b %d, %Y" }}</strong>
+      <h2 class="article-title"><a href="{{ article.url }}">{{ article.data.title }}</a></h2>
+      <p class="article-summary">{{ article.data.summary }}</p>
+      {% assign authors = article.data.byline | withAuthors: collections.authors %}
+      <div class="article-meta">
+        <ul class="article-byline">
+        {% for name in authors %}
+          <li>{{ name }}</li>
+        {% endfor %}
+        </ul>
+      </div>
+    </article>
+    </div>
+    <div class="home-content">
+      <div class="home-text">
+        {{ content | safe }}
+      </div>
+      <aside class="home-aside">
+        <figure class="home-glyph">
+          <strong>Δ</strong>
+        </figure>
+      </aside>
+    </div>
+  </div>
+  {% include main-footer %}
+</body>
+</html>

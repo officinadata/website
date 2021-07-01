@@ -1,7 +1,7 @@
 ---
 permalink: /
 title: DareScience
-layout: page
+layout: home
 ---
 
 This is the homepage introduction.
