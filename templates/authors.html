@@ -14,7 +14,11 @@
           </div>
         </div>
         <figure class="author-picture">
+          {% if author.data.profile_image %}
+          <img src="/images/{{ author.data.profile_image }}" alt="Picture of {{ author.data.name }}">
+          {% else %}
           <strong>{{ author.data.placeholder_glyph }}</strong>
+          {% endif %}
         </figure>
       </div>
     {% endfor %}

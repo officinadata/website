@@ -298,6 +298,11 @@ li.secondary {
 
 .author-picture {
   background-color: var(--color-spot);
+  overflow: hidden;
+}
+
+.author-picture img {
+  width: 100%;
 }
 
 .author-picture strong {
