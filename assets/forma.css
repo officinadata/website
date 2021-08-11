@@ -440,9 +440,10 @@ li.secondary {
   justify-content: space-between;
 }
 
-.home-text {
+.home-embed {
   font-size: 1.2em;
   padding: 3em;
+  align-self: center;
 }
 
 .home-aside {
@@ -457,6 +458,15 @@ li.secondary {
   display: block;
   font-size: 30vh;
   color: var(--color-highlight);
+}
+
+@media screen and (max-width: 960px) {
+  .home-content {
+    justify-content: center;
+  }
+  .home-aside {
+    display: none;
+  }
 }
 
 .magazine {
