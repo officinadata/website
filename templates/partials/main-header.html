@@ -1,9 +1,15 @@
 <header class="main-header">
   <figure class="main-logo">
   {% if url == "/" %}
-    <a href="/"><h1>{{ main.logo }}</h1></a>
+    <a href="/">
+      <span class="main-logo-symbol">{{ main.logo_symbol }}</span>
+      <h1>{{ main.logo }}</h1>
+    </a>
   {% else %}
-    <a href="/"><strong>{{ main.logo }}</strong></a>
+    <a href="/">
+      <span class="main-logo-symbol">{{ main.logo_symbol }}</span>
+      <strong>{{ main.logo }}</strong>
+    </a>
   {% endif %}
   </figure>
   <nav class="main-nav">

@@ -83,6 +83,11 @@ li {
   margin-left: 2em;
 }
 
+.main-header .main-logo .main-logo-symbol {
+  font-size: 80%;
+  vertical-align: top;
+}
+
 .main-footer .main-footer-stack {
   display: flex;
   justify-content: space-around;
