@@ -8,7 +8,11 @@
     {% for author in collections.authors %}
       <div class="author" id="{{ author.data.id }}">
         <div class="author-profile">
+        {% if author.data.website %}
           <a href="{{ author.data.website }}"><h2>{{ author.data.name }}</h2> <span>{{ author.data.website }}</span></a>
+        {% else %}
+          <h2>{{ author.data.name }}</h2>
+        {% endif %}
           <div class="author-bio">
             {{ author.templateContent }}
           </div>

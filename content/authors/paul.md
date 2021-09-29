@@ -2,7 +2,6 @@
 tag: author
 id: paul
 name: Paul
-website: ""
 placeholder_glyph: ≉
 profile_image: paul.png
 ---
