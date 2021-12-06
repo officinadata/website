@@ -1,84 +1,137 @@
 ---
-title: Replace this with a real article
-date: 2021-05-17
-summary: A short summary of the article’s main point or argument
+title: A glance at Muslim related news in the press
+date: 2021-12-06
+summary: New Zealand press continues to be biased toward negative emotional tones when reporting about Muslim
 layout: article
 byline: gvdr
 ---
 
-# Demo Content
+# Intro
 
-A tool is an object that can extend an individual's ability to modify features of the surrounding environment. Although many animals use simple tools, only human beings, whose use of stone tools dates back hundreds of millennia, have been observed using tools to make other tools.
+Recently, I've been invited by the NZ's Human Right Commission to a hui about disinformation, hate speech and Muslim representation communities in the media.
+I have little to contribute, personally. Yet, I had the luck to work for some time with Mazharuddin Syed Ahmed (ARA Institute of Canterbury), and we have been monitoring anti-Islamic rhetoric on social media and mainstream media in Aotearoa New Zealand for two years or more now.
 
-## Metaphors
+As there were a number of journalists taking part in the hui (all very motivated, kind, and sensible I have to say upfront) I decided to show some preliminary results of that monitoring.
 
-A telephone is a communication tool that interfaces between two people engaged in conversation at one level. It also interfaces between each user and the communication network at another level. It is in the domain of media and communications technology that a counter-intuitive aspect of our relationships with our tools first began to gain popular recognition. Marshall McLuhan famously said "We shape our tools. And then our tools shape us." McLuhan was referring to the fact that our social practices co-evolve with our use of new tools and the refinements we make to existing tools.
+# Data
 
-### Third Level Heading
+All the data comes from querying the [GEDLT project](https://www.gdeltproject.org) (that is, the Global Database of Events, Language, and Tone) V2 apis. Thus, all of the data is publicly available. Using their own words, GDELT is "an initiative to construct a catalog of human societal-scale behavior and beliefs across all countries of the world, connecting every person, organization, location, count, theme, news source, and event across the planet into a single massive network that captures what's happening around the world, what its context is and who's involved, and how the world is feeling about it, every single day."
 
-Blockquotes allow embedding content from other websites.
+The project started in 2011, and is now well established and is considered reliable (and its limitation have been noted).
 
-> We recognize that we gather as part of a professional field with a colonial history and colonial present, and we aim to lessen the ongoing harms by responsibly speaking about the harmful impact of settler colonialism.
-> As an organization, we recognize this history and uplift the sovereignty of Indigenous people, data, and territory. We commit to dismantling all ongoing settler-colonial practices and their material implications on our digital worlds.
+The dataset we considered monitors and performs elementary analysis on a large sample of Aotearoa news outlets (mostly press).
 
-#### Fourth Level Heading
+# Methodology
 
-A key feature for content in Eleventy is "collections". If you come from the WordPress world like I do, you can think of these similair to how adding tags creates sets of content. In fact, Eleventy uses the same convention of tags as one way to create a collection.
+We performed a query searching for news containing keywords refering to Islam and the Muslim communities, limiting our search to Aotearoa. Similarly, we picked a bunch of keywords to build a constrat group of news referring to the Christian (Catholic, Anglican, ...) church. We considered a "total" period (starting in 2017), a "before the attack" period (2017 to February 2019), and an "after the attack" period (August November 2019 to today). As we will see, the "after the attack" period has been calibrated so to start *after* the attention brought by the attack has passed.
 
-Tags can be added in Frontmatter, either as a single string or as an array.
+# Results
 
-But the slickest way is to create a directory data file. The directory data file needs to be named the same as the directory, and can be either JSON or JavaScript. It can hold any values that you would otherwise have to repeat in Frontmatter for all related content.
+The following results are tentative, and they do not in any way substitute a careful reading of the news performed by historians, sociologists, communication and journalism researchers, ..., nor the experience of those impacted by anti-Islamic narratives and actions.
 
-So in this example located in our posts directory, we create posts.json and define the tags as well as the layout:
+We propose them just to try and offer a data-informed background to more accurate readings and intepretations.
 
-```js
-{
-  layout: "article",
-  tags: "articles"
-}
-```
+The main question we try to tackle is: _how did the journalist representation of Muslim communities change after the March 2019 white supremacist attack?_
 
-Now, we can access the `articles` collection within any of our templates.
+## Indignation burns quickly
 
-##### Fairness & Equality
+The first visible result is that the strong attention about the Muslim communities that followed the attack whined quickly. In the following figure we can see that the attention span didn't last more than three months.
 
-AI development should not exploit, discriminate or bias against any group of people.
+![Volume trend](images/agam_Total_volume.png)
 
-###### Fairness & Equality
+After those, the proportion of news regarding the Muslim communities in the news outlets returned to pre-attack levels.
 
-AI development should not exploit, discriminate or bias against any group of people.
+There might be some little shift in the base line attention, but if so it is negligeable in size.
 
-## Climate Grid Example
+It is also visible a "remembrance" effect, with yearly spike following the main one.
 
-Note that if the ClimGrid data structure has 3 dimensions (time x longitude x latitude) the `mapclimgrid` function makes a time-average (i.e. climatological mean). Right now, there are a growing list of hardcoded regions (see help section of `mapclimgrid` function) and the default `auto` which use the maximum and minimum of the lat-long coordinates inside the `ClimGrid` structure. The user can also provide a polygon(s) and the `mapclimgrid` function will clip the grid points outside the specified polygon. Another option is to provide a mask (with dimensions identical to the spatial dimension of the `ClimGrid` data) which contains `NaN` and `1.0` and the data inside the `ClimGrid` struct will be clipped with the mask. Other regions will be added in the future, as well as the option to send a custom region defined by a lat-lon box.
+## A sad history
 
-```julia
-struct ClimGrid
-  data::AxisArray # labeled axis
-  longrid::AbstractArray{N,2} where N # the longitude grid
-  latgrid::AbstractArray{N,2} where N # the latitude grid
-  msk::Array{N, 2} where N
-  grid_mapping::Dict # bindings of native grid
-  dimension_dict::Dict
-  model::String
-  frequency::String
-  experiment::String
-  run::String
-  project::String # CORDEX, CMIP5, etc.
-  institute::String
-  filename::String
-  dataunits::String
-  latunits::String # of the coordinate variable
-  lonunits::String # of the coordinate variable
-  variable::String # Type of variable (i.e. can be the same as "var", but it is changed when calculating indices)
-  typeofvar::String # Variable type (e.g. tasmax, tasmin, pr)
-  typeofcal::String # Calendar type
-  timeattrib::Dict # Time attributes
-  varattribs::Dict # Variable attributes
-  globalattribs::Dict # Global attributes
-end
-```
+The second result we offer regards the _emotional tone_ associated with the articles published.
 
-Embedding an image. More than 20 climate indices are available in the package, such as the annual number of tropical nights, annual maximum and minimum, etc. Climate indices can easily be developed by following the source code or looking at the available metadata inside a `ClimGrid`.
+In the following figure we can notice that the average, daily, emotional tone of the articles was negative (that is, mostly sad, angry, disappointed, ..., emotions) before the attack.
 
-![example map](/images/example-map.png)
+![Tone trend](images/agam_Total_Tone.png)
+
+Maybe more surprising is the temporal evolution after the attack. We may expect a significant change, maybe a shift toward positive news. That would correspond to noticeable attempt by journalist to use a wider emotional palette while talking about the Muslim communities, an attempt to move away from stereotyped representations.
+
+Yet, despite a visible increase of the emotional variance, and a small shift toward less negative emotions, the overall tone remains negative.
+
+## A sadder history
+
+The negative emotional tone of the news is not found, on the other hand, in the contrast group (the news relating to the Christian communities).
+
+![Tone barcharts](images/agam_Barchart_Tone_fg.png)
+
+In the previous figure we look at the emotional distribution across the 4 groups (in different shades of blue News about the Muslim communities, in violet news about the Christian communities). It is noticeable how the Christian related news are roughly neutral (the median and the mean are close to zero), and positive and negative news are equally represented (the tails of the distribution are somewhat symmetric around the zero). On the other hand, the news about the Muslim communities are visibly shifted toward the negative emotional tones.
+
+The difference between the total (dark blue), before the attack (blue), and after the attack (light blue) periods are small in comparison to the difference with the control group.
+
+If the emotional palette used by the journalist has changed (and I'm sure many good journalist in Aotearoa are trying to do it), we could not see the effect in the GDELT data.
+
+# Image stereotype
+
+Finally, we took a look at the image tags and topics associated with the collected news articles. Images tags are "visual description" produced algorithmically by Google's Cloud Vision API; image topics are obtained by Google's Cloud Vision API reading the written caption of each image as well as the caption of the same image published elsewhere.
+
+We compared the tags and topics obtained from the news associated to the Muslim and the Christian communities, noticing which words were over or under represented in the two groups.
+
+## Bearded men
+
+Looking at the image tags for the news related to the Muslim communities after the attack, we found an over representation of terms related to the physical aspect of Muslim: these include words like _beard_, _facial air_, _moustache_, _eyelash_.
+
+|                         Label | Muslim | Christian | Difference |
+| -----------------------------:|:-----:|:-------:|:----------:|
+|                         Beard |    61 |      16 |         45 |
+|           White-collar Worker |    45 |       9 |         36 |
+|                         Smile |    65 |      30 |         35 |
+|                   Facial Hair |    53 |      19 |         34 |
+|                   Formal Wear |    54 |      21 |         33 |
+|                       Sitting |    54 |      28 |         26 |
+|                          Room |    63 |      38 |         25 |
+|                     Moustache |    36 |      11 |         25 |
+|                       Eyelash |    34 |       9 |         25 |
+
+Conversaly, terms appearing more in the Christian image tags seem not to be connoted in any stereotypical way.
+
+|             Label | Muslim | Christian | Difference |
+| -----------------:|:-----:|:-------:|:----------:|
+|           T-shirt |    31 |      44 |        -13 |
+|     Motor Vehicle |    11 |      23 |        -12 |
+|           Leisure |    38 |      50 |        -12 |
+|             Chair |    19 |      31 |        -12 |
+|           Vehicle |     9 |      20 |        -11 |
+|             Grass |    22 |      32 |        -10 |
+|           Asphalt |    16 |      24 |         -8 |
+|        Recreation |    37 |      44 |         -7 |
+| Natural Landscape |     9 |      16 |         -7 |
+
+## Facial hair and terrorism
+
+The situation is, if possible, even clearer looking at the image topics (the descriptors obtained by reading the image caption). If we consider the terms appearing only for the images of the news published after the attack (notice: starting six months *after* the attack, so when the initial response phase was already passed) we find strong physical stereotypation and an explicit reference to terrorism:
+
+|       Label |   Count |
+| -----------:| -------:|
+| Facial Hair | 75.0000 |
+|     Biology | 75.0000 |
+|    Headgear | 75.0000 |
+|    Minister | 50.0000 |
+|       Night | 50.0000 |
+|       Court | 50.0000 |
+|   Terrorism | 50.0000 |
+|     Airport | 50.0000 |
+|  Photograph | 50.0000 |
+|    Lockdown | 50.0000 |
+
+# Conclusions
+
+We again want to stress the limitation of our superficial survey. These results are tentative. They need an explanation. They may be falsified at a more careful look.
+
+Yet, I believe personally (Giulio's writing) that they are suggestive of a wide spread, systematic bias that has not been tackled (yet) after the attack.
+
+While I am the first to recognise the serious effort that many journalist, academics, community members, activists, are doing to change the stereotyped representation, that change change has not happened (yet).
+
+We (and here I'm speaking as an academic) should take a careful look in the mirror and ask what are doing to counter racism, colonialism, and white supremacy in our community?
+
+#### supplementary material
+
+All the code and data is publicaly available in DaRe's repository [here](link to github).
