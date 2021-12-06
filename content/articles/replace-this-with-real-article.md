@@ -37,7 +37,7 @@ The main question we try to tackle is: _how did the journalist representation of
 
 The first visible result is that the strong attention about the Muslim communities that followed the attack whined quickly. In the following figure we can see that the attention span didn't last more than three months.
 
-![Volume trend](images/agam_Total_volume.png)
+![Volume trend](/images/agam_Total_volume.png)
 
 After those, the proportion of news regarding the Muslim communities in the news outlets returned to pre-attack levels.
 
@@ -51,7 +51,7 @@ The second result we offer regards the _emotional tone_ associated with the arti
 
 In the following figure we can notice that the average, daily, emotional tone of the articles was negative (that is, mostly sad, angry, disappointed, ..., emotions) before the attack.
 
-![Tone trend](images/agam_Total_Tone.png)
+![Tone trend](/images/agam_Total_Tone.png)
 
 Maybe more surprising is the temporal evolution after the attack. We may expect a significant change, maybe a shift toward positive news. That would correspond to noticeable attempt by journalist to use a wider emotional palette while talking about the Muslim communities, an attempt to move away from stereotyped representations.
 
@@ -61,7 +61,7 @@ Yet, despite a visible increase of the emotional variance, and a small shift tow
 
 The negative emotional tone of the news is not found, on the other hand, in the contrast group (the news relating to the Christian communities).
 
-![Tone barcharts](images/agam_Barchart_Tone_fg.png)
+![Tone barcharts](/images/agam_Barchart_Tone_fg.png)
 
 In the previous figure we look at the emotional distribution across the 4 groups (in different shades of blue News about the Muslim communities, in violet news about the Christian communities). It is noticeable how the Christian related news are roughly neutral (the median and the mean are close to zero), and positive and negative news are equally represented (the tails of the distribution are somewhat symmetric around the zero). On the other hand, the news about the Muslim communities are visibly shifted toward the negative emotional tones.
 
