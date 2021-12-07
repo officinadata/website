@@ -8,7 +8,7 @@ byline: gvdr
 
 # Intro
 
-Recently, I've been invited by the NZ's Human Right Commission to a hui about disinformation, hate speech and Muslim representation communities in the media.
+Recently, I've been invited by the NZ's Human Right Commission to a hui about disinformation, hate speech and the representation of Muslim communities in the media.
 I have little to contribute, personally. Yet, I had the luck to work for some time with Mazharuddin Syed Ahmed (ARA Institute of Canterbury), and we have been monitoring anti-Islamic rhetoric on social media and mainstream media in Aotearoa New Zealand for two years or more now.
 
 As there were a number of journalists taking part in the hui (all very motivated, kind, and sensible I have to say upfront) I decided to show some preliminary results of that monitoring.
