@@ -10,6 +10,6 @@ byline: gvdr
 
 Andre Macleod has given a talk at the 2022 JuliaCon illustrating some of our work on merging some of the exciting new techinques of scientific machine learning ([sciml](www.sciml.ai)) and the study of dynamical complex networks.
 
-Here's the video on youtube:
+You can find the video of Andre's talk on youtube:
 
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/EstpgVW7lJI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
