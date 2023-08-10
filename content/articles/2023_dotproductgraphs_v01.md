@@ -1,5 +1,5 @@
 ---
-title: DotProductGraphs.jl: a Julia package
+title: "DotProductGraphs.jl: a Julia package"
 date: 2023-01-16
 summary: We just released a novel Julia package to work with Random Dot Product Graphs, for static and temporal complex networks.
 layout: article
